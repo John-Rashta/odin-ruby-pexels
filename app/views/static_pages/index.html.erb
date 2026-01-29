@@ -1,0 +1,11 @@
+<%= form_with url: root_path,  method: :get do | form |%>
+    <%= form.label :id %>
+    <%= form.text_field :id %>
+    <%=  form.submit %>
+<% end %>
+
+<% if @photos %>
+    <% @photos.each do |photo| %>
+        <%= image_tag photo, size: 300 %>
+    <% end %>
+<% end %>
